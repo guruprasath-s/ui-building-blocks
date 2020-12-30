@@ -1,0 +1,65 @@
+@import "../../assets/variables.scss";
+
+.#{$prefix}--radio-button-wrapper {
+  position: relative;
+  display: inline-flex;
+  margin: 0 10px;
+}
+.#{$prefix}--radio-button {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  visibility: inherit;
+  clip: rect(0, 0, 0, 0);
+}
+
+.#{$prefix}--radio-button-label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: 0.16px;
+  position: relative;
+  display: flex;
+  min-height: 1.5rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.#{$prefix}--radio-button__appearance {
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 2px 0.5rem 2px 0.5rem;
+  background-color: transparent;
+  border: 1px solid #161616;
+  border-radius: 50%;
+}
+
+.#{$prefix}--visually-hidden {
+  visibility: hidden;
+}
+
+.#{$prefix}--radio-button:checked
+  + .#{$prefix}--radio-button-label
+  .#{$prefix}--radio-button__appearance::before {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: #161616;
+  border-radius: 50%;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  content: "";
+}
+
+.#{$prefix}--radio-button:disabled + .#{$prefix}--radio-button-label {
+  cursor: not-allowed;
+  opacity: 0.4;
+}

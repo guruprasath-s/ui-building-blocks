@@ -1,0 +1,53 @@
+@import "../../assets/variables.scss";
+
+.#{$prefix}--text-input-wrapper {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: 0.16px;
+  display: inline-flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  .#{$prefix}--label {
+    font-size: 0.75rem;
+    letter-spacing: 0.32px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: #525252;
+    font-weight: 400;
+    line-height: 1rem;
+    vertical-align: baseline;
+  }
+  .#{$prefix}--text-input__field-wrapper {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    .#{$prefix}--text-input {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.29;
+      letter-spacing: 0.16px;
+      outline: 2px solid transparent;
+      outline-offset: -2px;
+      width: 100%;
+      height: 2.5rem;
+      padding: 0 1rem;
+      color: #161616;
+      background-color: #f4f4f4;
+      border: none;
+      border-bottom: 1px solid #8d8d8d;
+    }
+  }
+  .#{$prefix}--form__helper-text {
+    font-size: 0.75rem;
+    line-height: 1.34;
+    letter-spacing: 0.32px;
+    z-index: 0;
+    width: 100%;
+    margin-top: 0.25rem;
+    color: #525252;
+    opacity: 1;
+  }
+}

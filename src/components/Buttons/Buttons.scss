@@ -1,0 +1,71 @@
+@import "../../assets/variables.scss";
+
+@mixin button-theme(
+  $bg-color,
+  $border-color,
+  $font-color,
+  $hover-bg-color,
+  $active-color
+) {
+  color: $font-color;
+  background-color: $bg-color;
+  border-color: $border-color;
+  border-style: solid;
+  border-width: 1px;
+
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+
+  &:active {
+    background-color: $active-color;
+  }
+}
+
+.#{$prefix}--btn {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  margin: 0;
+  border: 0;
+  user-select: none;
+  text-decoration: none;
+  vertical-align: top;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  &:disabled,
+  &:hover:disabled,
+  &:focus:disabled,
+  &--disabled,
+  &--disabled:focus,
+  &--disabled:active,
+  &--disabled:hover {
+    color: rgba(0, 0, 0, 0.26);
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.12);
+    cursor: not-allowed;
+  }
+  &--sm {
+    padding: 4px 12px;
+  }
+  &--lg {
+    padding: 6px 16px;
+  }
+  &--xl {
+    padding: 10px 20px;
+  }
+}
+.#{$prefix}--btn--primary {
+  @include button-theme(#0f62fe, transparent, #fff, #0353e9, #002d9c);
+}
+.#{$prefix}--btn--secondary {
+  @include button-theme(#393939, transparent, #fff, #4c4c4c, #6f6f6f);
+}
